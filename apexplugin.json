@@ -1,0 +1,33 @@
+{
+  "name" : "Flexfields",
+  "version" : "1.0",
+  "description" : "The aim of this plugin is to provide dynamic item types which will be loaded at plugin runtime. For people who worked with Oracle eBusinessSuite I developed a similar idea which could fit perfectly with their own EBS flexfields.",
+  "keywords" : ["flexfield", "apex", "plugin", "oracle", "item"],
+  "homepage" : "https://github.com/josepcoves/apex_flexfield",
+  "bugs" : {
+    "url" : "https://github.com/josepcoves/apex_flexfield/issues",
+    "email" : "josepcoves@relational.es"
+  },
+  "license" : "MIT",
+  "author" : {
+    "name" : "Josep Coves",
+    "email" : "josepcoves@relational.es",
+    "url" : "http://www.relational.es/"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/josepcoves/apex_flexfield.git"
+  },
+ "oracle" : {
+    "versions" : ["11.2.0.1", "12.1.0.1"],
+    "apex" : {
+      "versions" : ["5.0.0"],
+      "plugin" : {
+        "internalName" : "ES.RELATIONAL.JOSEPCOVES.FLEXFIELD",
+        "type" : "item",
+        "demo" : "https://apex.oracle.com/pls/apex/f?p=JOSEPCOVES:FLEXFIELDS",
+        "previewImage" : "https://github.com/josepcoves/apex_flexfield/images/flexfield_demo.png"
+      }
+    }
+  }
+}
