@@ -113,12 +113,13 @@ WHERE FLEX_NAME = 'MyFlex01' and ACTIVE = 'S'
 - STRING: Textfield
 - TEXTAREA: TextArea
 - LOV: Select list (via APEX Lov)
--- Static
--- Dynamic
---- LOVSQL: LOV based on user SQL
---- LOVSQL column must be informed with inner sql
+  - Static
+  - Dynamic
+- LOVSQL: LOV based on user SQL
+  - LOVSQL column must be informed with inner sql
 
 ##Example
+```sql
 Select
        FLEX_NAME,        --(varchar2) Flexfield name
        FLEX_DESC,        --(varchar2) Flexfield description -> Shown at help
@@ -131,7 +132,7 @@ Select
        FLEX_HTML_ATTR,   --(varchar2) Additional HTML element attributes
        FLEX_LOV_SQL      --(varchar2) In case TYPE= LOVSQL this column specifies LOV SQL returning pairs display value and return value
 from FLEXFIELD_DEF
-
 where flexfield_name = 'MyField01'
+```
 
 [For more information visit tutorial page](http://goo.gl/934R1T)                          
