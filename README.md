@@ -26,6 +26,7 @@ PRODUCTS:
 Then you need a parametrization table for flexfield metadata, for instance:
 
 ###FLEXFIELD_DEF:
+```sql 
 CREATE SEQUENCE FLEXFIELD_DEF_SEQ
 /
 CREATE TABLE  "FLEXFIELD_DEF" 
@@ -80,32 +81,26 @@ begin
    end if;
 end;
 
->/
->ALTER TRIGGER  "FLEXFIELD_DEF_BIU" ENABLE
->/  
+/
+ALTER TRIGGER  "FLEXFIELD_DEF_BIU" ENABLE
+/  
+```
 
 Then you define a page which uses this plugin by querying previous table. SQL of flexfield plugin:
-
+```sql
 SELECT FLEX_NAME
        FLEX_DESCR,
        FLEX_TYPE,
        FLEX_SOURCE,
-       ‘N’ FLEX_NULLABLE,
+       'N' FLEX_NULLABLE,
        30 FLEX_SIZE
-                          
-                          
-
-                null FLEX_MAX_SIZE,
-
-                null FLEX_HEIGHT,
-
-                ‘’ FLEX_HTML_ATTRIBUTES
-
-                ‘’ LOV_SQL
-
+       null FLEX_MAX_SIZE,
+       null FLEX_HEIGHT,
+       null FLEX_HTML_ATTRIBUTES
+       null LOV_SQL
 FROM FLEXFIELD_DEF
-
-WHERE FLEX_NAME = ‘MyFlex01’ and ACTIVE = ‘S’
+WHERE FLEX_NAME = 'MyFlex01' and ACTIVE = 'S'
+```
 
 ##Some tricks:
 - You can dynamically display item label by caching its value via ITEM. For instance, define item plugin label as &P1_ITEM. And inform item value at page value, by reading FLEXFIELD_DEF table.
