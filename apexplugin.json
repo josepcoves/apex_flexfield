@@ -18,7 +18,7 @@
     "type" : "git",
     "url" : "https://github.com/josepcoves/apex_flexfield.git"
   },
- "oracle" : {
+ "oracle" : {                                            
     "versions" : ["11.2.0.1", "12.1.0.1"],
     "apex" : {
       "versions" : ["5.0.0"],
@@ -26,7 +26,7 @@
         "internalName" : "ES.RELATIONAL.JOSEPCOVES.FLEXFIELD",
         "type" : "item",
         "demo" : "https://apex.oracle.com/pls/apex/f?p=JOSEPCOVES:FLEXFIELDS",
-        "previewImage" : "https://github.com/josepcoves/apex_flexfield/images/flexfield_demo.png"
+        "previewImage" : "https://raw.githubusercontent.com/josepcoves/apex_flexfield/master/source/images/flexfield_demo.png"
       }
     }
   }
